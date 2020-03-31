@@ -23,7 +23,7 @@ export class MainService {
       console.log(this.apiPath + SQL);
       xhttp.open('GET', this.apiPath + SQL, true);
       xhttp.send();
-      xhttp.onreadystatechange = function () {
+      xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const resultObject = JSON.parse(xhttp.responseText);
 
@@ -45,12 +45,12 @@ export class MainService {
   addProduct(newProduct) {
     const s = new Promise((resolve, reject) => {
       const xhttp = new XMLHttpRequest();
-      let request = { action: 'addProduct', newProduct: newProduct }
+      const request = { action: 'addProduct', newProduct };
       const SQL = ('object=' + encodeURIComponent(JSON.stringify(request)));
       console.log(this.apiPath + SQL);
       xhttp.open('GET', this.apiPath + SQL, true);
       xhttp.send();
-      xhttp.onreadystatechange = function () {
+      xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const resultObject = JSON.parse(xhttp.responseText);
 
@@ -71,12 +71,12 @@ export class MainService {
   removeProduct(id) {
     const s = new Promise((resolve, reject) => {
       const xhttp = new XMLHttpRequest();
-      let request = { action: 'removeProduct', id: id }
+      const request = { action: 'removeProduct', id };
       const SQL = ('object=' + encodeURIComponent(JSON.stringify(request)));
       console.log(this.apiPath + SQL);
       xhttp.open('GET', this.apiPath + SQL, true);
       xhttp.send();
-      xhttp.onreadystatechange = function () {
+      xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const resultObject = JSON.parse(xhttp.responseText);
 
