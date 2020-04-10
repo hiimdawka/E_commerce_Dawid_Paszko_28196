@@ -1,13 +1,13 @@
 <div>
-    <div style="display: flex;flex-direction: row;">
-        <img src="https://via.placeholder.com/100" alt="">
-        <h2>Sklep z softłerem</h2>
+    <div id="log">
+        <img src="4.png" alt="logo" class="logo">
+        <h2 class="tytul">Sklepix</h2>
     </div>
 
-    <button routerLink="/adm_dashboard">Panel Administratora</button>
+    <button routerLink="/adm_dashboard" class="paneladm">Panel Administratora</button>
 
     <div style="display: flex; justify-content: center;">
-        <input type="text" [(ngModel)]="this.mainService.productsRequest.name">
+        <input type="text" class="wpisz" [(ngModel)]="this.mainService.productsRequest.name">
         <button (click)="this.mainService.getProducts(this.mainService.productsRequest)" routerLink="/products">Szukaj Produktu</button>
     </div>
     <div>

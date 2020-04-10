@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+button {
+  margin: 0px 3px 3px 2px;
+  background-color: #e7e7e7;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.wpisz {
+  height: 10%;
+  width: 10%;
+}
+
+.logo {
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+  display: block;
+  float: left;
+}
+
+.tytul {
+  text-align: center;
+  color: blue;
+  font-size: 50px;
+  text-shadow: 2px 2px #ff0000;
+  margin: 10px 0px 50px 0px;
+  font-weight: bold;
+  display: block;
+  clear: right;
+}
+
+body {
+  background-image: url("tak.png");
+  background-attachment: fixed;
+}
+
+.paneladm {
+  float: right;
+}
+
+#cartBtn {
+  float: right;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: pink;
+  background-color: yellow;
+}
+
+a:active {
+  color: purple;
+}
