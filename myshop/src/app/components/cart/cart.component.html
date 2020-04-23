@@ -27,13 +27,13 @@
   </div>
   <div class="payment">
     <div id="paypal">
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="">
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="paypal">
     </div>
     <form action="http://www.jakubadamus.cba.pl/paypal.php" method="get" #paymentForm>
-      <input type="text" #firstName name="firstName" id="" placeholder="Imie">
-      <input type="text" #lastName name="lastName" id="" placeholder="Nazwisko">
-      <input type="text" #email name="email" id="" placeholder="Email">
-      <input type="text" name="phone" id="" placeholder="Telefon">
+      <input type="text" #firstName name="firstName" id="c" placeholder="Imie">
+      <input type="text" #lastName name="lastName" id="c" placeholder="Nazwisko">
+      <input type="text" #email name="email" id="c" placeholder="Email">
+      <input type="text" name="phone" id="c" placeholder="Telefon">
       <ng-container *ngFor="let object of this.mainService.cart">
         <input type="hidden" name="products[]" value="{{ object | json }}">
       </ng-container>
