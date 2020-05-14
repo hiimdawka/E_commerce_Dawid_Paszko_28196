@@ -1,5 +1,7 @@
 <app-panel-top></app-panel-top>
 <div class="products">
+  <button onclick="sortuj()">Sortuj alfabetycznie</button>
+  <button onclick="sortuj_cen()">Cena od najtańszych</button>
     <table style="margin:0 auto;" id="productsTable">
         <thead *ngIf="this.mainService.products">
             <tr>
@@ -27,3 +29,21 @@
         </tbody>
     </table>
 </div>
+
+<p id="demo"></p>
+<script>
+  var produkty = [product.title];
+  var ceny = [produkt.price];
+  //document.getElementById("demo").innerHTML = produkty;
+  document.getElementById("demo").innerHTML = ceny;
+
+  //function sortuj(){
+  //  produkty.sortuj();
+  //  document.getElementById("demo").innerHTML = produkty;
+  //}
+
+  function sortuj_cen(){
+    ceny.sortuj();
+    document.getElementById("demo").innerHTML = ceny;
+  }
+</script>

@@ -1,18 +1,19 @@
-<div>
+<div id="jak">
     <div id="log">
-        <img src="assets/images/4.png" alt="logo" class="logo">
+        <img src="assets/images/logo.jpg" alt="logo" class="logo">
         <h2 class="tytul">Sklepix</h2>
     </div>
 
-    <button routerLink="/adm_dashboard" class="paneladm">Panel Administratora</button>
-
-    <div style="display: flex; justify-content: center;">
+    <div id="szukaj">
         <input type="text" class="wpisz" [(ngModel)]="this.mainService.productsRequest.name">
         <button (click)="this.mainService.getProducts(this.mainService.productsRequest)" routerLink="/products">Szukaj Produktu</button>
     </div>
-    <div>
+    <div id="panelBtna">
+      <button routerLink="/adm_dashboard" class="paneladm">Panel Administratora</button>
+
       <button id="cartBtn" routerLink="/cart">
         Ilość elementów w koszyku: {{getCartQuanity()}}
       </button>
+      <button id="lanBtn" routerLink="/landing">Strona główna</button>
     </div>
 </div>

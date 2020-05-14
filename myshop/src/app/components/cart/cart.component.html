@@ -1,6 +1,6 @@
 <app-panel-top></app-panel-top>
 <div class="products">
-  <table style="margin:0 auto;" id="cartTable">
+  <table id="cartTable">
     <thead *ngIf="this.mainService.products">
       <tr>
         <th>obrazek</th>
@@ -10,7 +10,7 @@
     <tbody>
       <ng-container *ngFor="let object of this.mainService.cart">
         <tr style="background-color: whitesmoke;">
-          <td><img src="{{object.product.thumbnail}}" alt=""></td>
+          <td><img src="{{object.product.thumbnail}}" alt="" class="obrazek"></td>
           <td>
             <ul>
               <li>Tytuł: {{object.product.title}}</li>
@@ -23,13 +23,14 @@
     </tbody>
   </table>
   <div class="summary">
-    <p>Do zapłaty: {{getCartPrice()}}</p>
+    <p class="zaplata">Do zapłaty: {{getCartPrice()}} zł</p>
   </div>
   <div class="payment">
     <div id="paypal">
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="paypal">
+      <img src="/assets/images/paypal.png" alt="paypal">
     </div>
-    <form action="http://www.jakubadamus.cba.pl/paypal.php" method="get" #paymentForm>
+    <br><br>
+    <form action="http://www.jakubadamus.cba.pl/paypal.php" method="get" #paymentForm class="paypalment">
       <input type="text" #firstName name="firstName" id="c" placeholder="Imie">
       <input type="text" #lastName name="lastName" id="c" placeholder="Nazwisko">
       <input type="text" #email name="email" id="c" placeholder="Email">

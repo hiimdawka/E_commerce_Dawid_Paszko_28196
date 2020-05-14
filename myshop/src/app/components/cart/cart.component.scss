@@ -1,10 +1,34 @@
-.payment {
+#paypal {
   display: flex;
   justify-content: center;
+  height: 300px;
 
 }
 
 #c {
   margin: 5px;
   border-radius: 5px;
+}
+
+.obrazek {
+  max-width: 300px;
+  max-height: 500px;
+  margin: 10px;
+}
+
+.paypalment {
+  display: flex;
+  justify-content: center;
+}
+
+.summary p {
+  color: red;
+}
+
+#cartTable {
+  margin: 0 auto;
+}
+
+.zaplata {
+  font-size: large;
 }
