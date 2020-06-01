@@ -13,9 +13,6 @@ export class DashboardComponent implements OnInit {
 
   constructor(public mainService: MainService) { }
 
-  ngOnInit(): void {
-    this.mainService.getOrders();
-  }
 
   public barChartOptions: ChartOptions = {
     responsive: true,
@@ -28,7 +25,7 @@ export class DashboardComponent implements OnInit {
       }
     }
   };
-  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartLabels: Label[] = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
   public barChartPlugins = [pluginDataLabels];
@@ -36,7 +33,7 @@ export class DashboardComponent implements OnInit {
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
-  // events
+// events
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
@@ -53,5 +50,12 @@ export class DashboardComponent implements OnInit {
       56,
       (Math.random() * 100),
       40];
-      this.barChartData[0].data = data;}
+    this.barChartData[0].data = data; }
+
+  ngOnInit(): void {
+    this.mainService.getOrders();
+  }
+
+
+
 }

@@ -103,12 +103,12 @@ export class MainService {
   getOrders() {
     const s = new Promise((resolve, reject) => {
       const xhttp = new XMLHttpRequest();
-      const request = { action: 'getOrders' }
+      const request = { action: 'getOrders' };
       const SQL = ('object=' + encodeURIComponent(JSON.stringify(request)));
       console.log(this.apiPath + SQL);
       xhttp.open('GET', this.apiPath + SQL, true);
       xhttp.send();
-      xhttp.onreadystatechange = function () {
+      xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const resultObject = JSON.parse(xhttp.responseText);
 
@@ -123,6 +123,7 @@ export class MainService {
     s.then((onmessage: any) => {
       console.log('Pomyślnie pobrano zamówienia!');
       this.orders = onmessage;
+      console.log(this.orders);
     }).catch((onmessage) => {
       console.log('Coś poszło nie tak podczas pobierania zamówień!');
     });
