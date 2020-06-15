@@ -26,6 +26,7 @@ export class DashboardComponent implements OnInit {
     }
   };
   public barChartLabels: Label[] = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
+  // public barChartLabels: Label[] = [{{orders.date_end}}];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
   public barChartPlugins = [pluginDataLabels];
