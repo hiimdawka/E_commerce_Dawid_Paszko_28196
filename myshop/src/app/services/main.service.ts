@@ -18,6 +18,8 @@ export class MainService {
 
   cart = [];
 
+  orders = null;
+
 
 
   getProducts(productsRequest) {
@@ -98,8 +100,6 @@ export class MainService {
       console.log('Coś poszło nie tak podczas usuwania produktu!');
     });
   }
-
-  orders = null;
   getOrders() {
     const s = new Promise((resolve, reject) => {
       const xhttp = new XMLHttpRequest();
